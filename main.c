@@ -9,8 +9,6 @@
 
 #include "APP.h"
 
-#include <util/delay.h>
-
 void main (void)
 {
 	uint8 Local_u8VocalCommand=0u;
@@ -65,6 +63,10 @@ void main (void)
 
 		case '8':
 			APP_voidControlFanByTemp();
+			break;
+
+		case '9':
+			APP_voidControlFanByHand();
 			break;
 
 		default:

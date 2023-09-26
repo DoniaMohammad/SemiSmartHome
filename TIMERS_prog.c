@@ -9,6 +9,23 @@
 #include "TIMERS_reg.h"
 
 static void (*TIMER0_pvNotificationFunc)(void) = NULL;
+void TIMER0_voidPWMInit(void)
+{
+	SET_BIT(TCCR0,TCCR0_WGM00);
+	SET_BIT(TCCR0,TCCR0_WGM01);
+
+	/*set PRESCALER value*/
+	TCCR0 &= PRESCALER_MASK;
+	TCCR0 |= DIVISION_BY_64;
+
+	SET_BIT(TCCR0,TCCR0_COM00);
+	SET_BIT(TCCR0,TCCR0_COM01);
+}
+
+void TIMER0_PWM(uint8 copy_u8PWMValue)
+{
+	OCR0 = copy_u8PWMValue;
+}
 
 void TIMER0_voidInit(void)
 {

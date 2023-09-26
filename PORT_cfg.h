@@ -5,7 +5,7 @@
 										2- OUTPUT
 */
 
-#define PORTA_PIN0_DIR		INPUT		/*LDR*/
+#define PORTA_PIN0_DIR		INPUT		/*LDR+POTENTIOMETER*/
 #define PORTA_PIN1_DIR		OUTPUT		/*CLCD*/
 #define PORTA_PIN2_DIR		OUTPUT		/*CLCD*/
 #define PORTA_PIN3_DIR		OUTPUT		/*CLCD*/

@@ -293,3 +293,11 @@ void APP_voidControlFanByTemp(void)
 	CLCD_voidGoToXY(8,0);
 	CLCD_voidSendNumber(Local_u8AnalogReading);
 }
+
+
+void APP_voidControlFanByHand(void)
+{
+	TIMER0_voidPWMInit();
+	TIMER0_PWM(ADC_u8GetChannelReading(ADC0_SINGLE_ENDED));
+	CLCD_voidSendString("CONTROLLING FAN");
+}

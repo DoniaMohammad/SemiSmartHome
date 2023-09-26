@@ -13,5 +13,6 @@ void APP_voidCloseDoor(void);
 void APP_voidOpenFan(void);
 void APP_voidCloseFan(void);
 void APP_voidControlFanByTemp(void);
+void APP_voidControlFanByHand(void);
 
 #endif
